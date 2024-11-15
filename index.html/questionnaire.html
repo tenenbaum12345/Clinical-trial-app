@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, button, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .yes-no {
+            display: flex;
+            justify-content: space-between;
+        }
+        .yes-no input {
+            width: auto;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Application</h1>
+        <form action="https://formspree.io/f/xnnqvkaz" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+            <label>Are you currently experiencing any acute illnesses (e.g., fever, cold)?</label>
+            <div class="yes-no">
+                <label><input type="radio" name="acute_illness" value="Yes" required> Yes</label>
+                <label><input type="radio" name="acute_illness" value="No" required> No</label>
+            </div>
+
+            <label>Have you had any chronic health conditions in the past 6 months?</label>
+            <div class="yes-no">
+                <label><input type="radio" name="chronic_conditions" value="Yes" required> Yes</label>
+                <label><input type="radio" name="chronic_conditions" value="No" required> No</label>
+            </div>
+
+            <label>Are you currently taking any immunosuppressive medications?</label>
+            <div class="yes-no">
+                <label><input type="radio" name="immunosuppressive_medication" value="Yes" required> Yes</label>
+                <label><input type="radio" name="immunosuppressive_medication" value="No" required> No</label>
+            </div>
+
+            <label>Are you pregnant or breastfeeding?</label>
+            <div class="yes-no">
+                <label><input type="radio" name="pregnant_breastfeeding" value="Yes" required> Yes</label>
+                <label><input type="radio" name="pregnant_breastfeeding" value="No" required> No</label>
+            </div>
+
+            <label for="additional-info">Additional Information:</label>
+            <textarea id="additional-info" name="additional_info" placeholder="Provide any other relevant details" rows="4"></textarea>
+            
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
